@@ -60,9 +60,9 @@ Use “ls” once you’re logged in to see if your file copied over
     - This should generate the key files and a randomart image representing your key; you don’t have to keep track of or worry about this at all.
 ![image7](image7.PNG)
     - If you’re on a Mac, skip this step. Windows users have to enter these three commands next:
-        - "Get-Service ssh-agent | Set-Service -StartupType Manual"
+        - "Get-Service ssh-agent \vert Set-Service -StartupType Manual"
         - "Start-Service ssh-agent"
-        - "ssh-add C:\Users\Username\.ssh\id_rsa"
+        - "ssh-add C:\Users\Username\\.ssh\id_rsa"
 ![image8](image8.PNG)
     - Log on to the server using ssh, and run this command: "mkdir .ssh"
     - Finally, logout of the server, and run this command: "scp /Users/Username/.ssh/id_rsa.pub cs15lwi22zzz@ieng6.ucsd.edu:~/.ssh/authorized_keys"
