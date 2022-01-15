@@ -1,7 +1,7 @@
 # Remotely Connecting (an epic blog post)
 
 ## Installing VSCode
-- VSCode can be downloaded at https://code.visualstudio.com/download
+- VSCode can be downloaded at [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 - Click the download button for your type of computer
 - Execute the VSCode installer by double clicking it in your downloads folder
 - Once installed, VSCode should open to something like this:
@@ -13,7 +13,7 @@
     - This should only be an issue if you’re on Windows
 - Go to Settings > Apps > Apps & Features > Optional Features > Add a feature
     - Install OpenSSH Client and OpenSSH Server
-- Next, find your ieng6 account by logging into  https://sdacs.ucsd.edu/~icc/index.php
+- Next, find your ieng6 account by logging into [https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php)
     - All engineering students’ ieng6 accounts start with “cs15lwi22” and end with different characters, so it’s important to remember the characters after 22
 - On VSCode, click the “Terminal” tab at the top, and then click “New Terminal”
 - To remotely connect to the ieng6 server, enter this command into the terminal: ssh cs15lwi22zzz@ieng6.ucsd.edu
@@ -25,7 +25,7 @@
 
 ## Trying Some Commands
 - Once you’re logged on to the ieng6 account, you can run commands on the server
-- Here is a list of basic ssh commands for you to try. They were found at https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
+- Here is a list of basic ssh commands for you to try. They were found at [https://www.hostinger.com/tutorials/ssh/basic-ssh-commands](https://www.hostinger.com/tutorials/ssh/basic-ssh-commands)
 ![image3](image3.PNG)
 
 - Here is an example of me using some of the commands:
