@@ -49,6 +49,36 @@ Use “ls” once you’re logged in to see if your file copied over
 
 
 ## Setting an SSH Key
+- Entering a password everytime you want to use ssh (or scp) can be time consuming, but as you may have noticed in the last picture I don’t have to enter a password every time. This is because I set something up called an “SSH Key”
+    - SSH keys work by creating a private “key” on your client and a public “key” on the server. Then when you login with ssh, the server confirms your client using the key instead of a password
+- To set up an SSH key, start in the terminal on your client. 
+    - Enter the command: ssh-keygen
+    - When the terminal asks you where to save the key, it will by default suggest: /Users/Username/.ssh/id_rsa
+        - (Replace “Username” with the name of your profile on your client)
+    - Hit enter without typing anything to use this default directory (recommended)
+    - Hit “Enter” twice to confirm an empty password
+    - This should generate the key files and a randomart image representing your key; you don’t have to keep track of or worry about this at all.
+![image7](image7.PNG)
+    - If you’re on a Mac, skip this step. Windows users have to enter these three commands next:
+        - Get-Service ssh-agent | Set-Service -StartupType Manual
+        - Start-Service ssh-agent
+        - ssh-add C:\Users\Username\.ssh\id_rsa
+![image8](image8.PNG)
+    - Log on to the server using ssh, and run this command: mkdir .ssh
+    - Finally, logout of the server, and run this command: scp /Users/Username/.ssh/id_rsa.pub cs15lwi22zzz@ieng6.ucsd.edu:~/.ssh/authorized_keys
+    - Enter you password one last time :)
+![image9](image9.PNG)
+- If you made it through all those steps, you should be able to ssh and scp in and out of the server without entering a password.
 
 
 ## Optimizing Route Running
+- There are a few more optimizations one can make besides SSH Keys involving the use of more efficient commands
+- Here are three such examples:
+    - One can run multiple commands by separating them with semicolons
+        - Ex: javac Command.java; java Command
+    - One can run a command on the server through ssh without logging in by putting the command after the server ip
+        - Ex: ssh cs15lwi22zzz@ieng6.ucsd.edu ls
+    - One can use quotation marks at the end of an ssh command to run multiple commands on the server without having to log in
+        - Ex: ssh cs15lwi22zzz@ieng6.ucsd.edu “javac Command.java; java Command”
+        - Note: if those files are not already on the server there won’t be anything for the server to run
+![image10](image10.PNG)
