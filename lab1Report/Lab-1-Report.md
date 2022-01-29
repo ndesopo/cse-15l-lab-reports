@@ -86,8 +86,8 @@ Use `ls` once you’re logged in to see if your file copied over
     - That last example takes 67 keystrokes to enter into the terminal, in order to run what would otherwise be 4 separate commands.
         - This takes 21.3 seconds to do.
     - To enter those commands commands separately would take 66 keystrokes
-        - 'ssh cs15lwi22zzz@ieng6.ucsd.edu' takes 32 keystrokes
-        - 'javac Command.java' takes 19 keystrokes
-        - 'java Command' takes 13 keystrokes
+        - `ssh cs15lwi22zzz@ieng6.ucsd.edu` takes 32 keystrokes
+        - `javac Command.java` takes 19 keystrokes
+        - `java Command` takes 13 keystrokes
         - Pressing Ctrl + D (to exit ssh) takes 2 keystrokes
         - Altogether, this takes 24.9 seconds to do.
