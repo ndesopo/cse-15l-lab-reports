@@ -23,7 +23,7 @@
 ## Code Change 3: Adding IOException to JUNIT Tests (lab 4)
 
 In lab 4, my lab group had no bugs due to the actual test files; our only bugs came from creating the tests themselves. I only made 3 very general commits and none were to fix a specific bug, but instead had many changes each. However, between creating the getLinks tests for the first two test files and the following commit, I encountered the error caused by a lack of throwing IOException on JUNIT tests.
-!([Screenshot of commit](image5.PNG)
+![Screenshot of commit](image5.PNG)
 - [Link to failure-inducing test file](https://raw.githubusercontent.com/ndesopo/cse-15l-lab-reports/main/lab4/MarkdownParseTest.java)
 - Symptom: 
     - ![Symptom Picture](image7.PNG)
