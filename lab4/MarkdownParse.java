@@ -12,10 +12,7 @@ public class MarkdownParse {
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
-            //Check if another link is in the rest of the text
-            if(nextOpenBracket == -1){
-                break;
-            }
+            
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
             //Check if text is close to being a link but not a link
@@ -24,6 +21,11 @@ public class MarkdownParse {
                 continue;
             }
             int closeParen = markdown.indexOf(")", openParen);
+
+            //Check if another link is in the rest of the text
+            if(nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1){
+                break;
+            }
 
             //Check for image using "!" marker
             if(nextOpenBracket >= 1 && markdown.charAt(nextOpenBracket-1) == '!') {
