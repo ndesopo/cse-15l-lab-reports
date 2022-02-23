@@ -24,32 +24,4 @@ public class MarkdownParseTest { //class header
     public void testFile() throws IOException {
         testGetLinks("test-file.md links didn't extract correctly", List.of("https://something.com", "some-page.html"), "test-file.md");
     }
-    @Test
-    public void testFile2() throws IOException {
-        testGetLinks("test-file2.md links didn't extract correctly", List.of("https://www.poptropica.com","not-even-real.html","https://www.netflix.com"), "test-file2.md");
-    }
-    @Test
-    public void testFile3() throws IOException {
-        testGetLinks("test-file3.md was supposed to have no links", List.of(), "test-file3.md");
-    }
-    @Test
-    public void testFile4() throws IOException {
-        testGetLinks("test-file4.md was supposed to have no links", List.of(), "test-file4.md");
-    }
-    @Test
-    public void testFile5() throws IOException {
-        testGetLinks("test-file5.md was supposed to have no links", List.of(), "test-file5.md");
-    }
-    @Test
-    public void testFile6() throws IOException {
-        testGetLinks("test-file6.md was supposed to have no links", List.of(), "test-file6.md");
-    }
-    @Test
-    public void testFile7() throws IOException {
-        testGetLinks("test-file7.md was supposed to have no links", List.of(), "test-file7.md");
-    }
-    @Test
-    public void testFile8() throws IOException {
-        testGetLinks("test-file8.md should have one link", List.of("a link on the first line"), "test-file8.md");
-    }
 }
