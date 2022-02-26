@@ -22,3 +22,5 @@
 - This is the command I used `scp -r markdown-parse ieng6:~/markdown-parse; ssh ieng6 'cd markdown-parse; javac MarkdownParse.java; javac -cp .:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
 ![all at once 1 ](image6.PNG)
 ![all at once 2](image5.PNG)
+
+# Bonus: Set up Github Access from ieng6
